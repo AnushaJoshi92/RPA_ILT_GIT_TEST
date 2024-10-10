@@ -1,0 +1,21 @@
+{
+  "DisplayName": "Main",
+  "Tooltip": null,
+  "HelpLink": null,
+  "Color": null,
+  "OriginalIconFileName": null,
+  "Arguments": [
+    {
+      "Name": "url_get",
+      "DisplayName": "url_get",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": "https://www.scchildcare.org/provider-search/",
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    }
+  ]
+}

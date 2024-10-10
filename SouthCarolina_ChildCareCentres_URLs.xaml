@@ -1,0 +1,167 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="SouthCarolina_ChildCareCentres_Extraction" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="url_get" Type="InArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>844,1022</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>SouthCarolina_LicenseDetails_Extraction_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Numerics</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>UiPath.CSV</x:String>
+      <x:String>UiPath.CSV.Activities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="SouthCarolina_ChildCareCentres_URLs" sap:VirtualizedContainerService.HintSize="512,957.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Name="SC_CCC_URLList" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Firefox: Provider Search - SC Child Care Services" sap:VirtualizedContainerService.HintSize="450,532" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" ScopeGuid="c20f9125-50c1-4565-80c7-2752a73d3f98" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,272.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:Int32" Name="page_count" />
+              <Variable x:TypeArguments="ui:UiElement" Name="NextButton_Check" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[SC_CCC_URLList]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='New column 0 Url'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;true&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataNextLink' /&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='Column0' attr='href'&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="354,185.33333333333334" sap2010:WorkflowViewState.IdRef="NExtractData_1" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="c20f9125-50c1-4565-80c7-2752a73d3f98" Version="V3">
+              <uix:NExtractData.NextLink>
+                <uix:TargetAnchorable BrowserURL="https://www.scchildcare.org/provider-search/?all=1" CvElementArea="372, 519, 67, 72" CvTextArea="393, 539, 22, 30" CvTextArgument="&gt;" CvType="Button" DesignTimeRectangle="379, 526, 54, 60" DesignTimeScaleFactor="1.5" ElementType="Text" FullSelectorArgument="&lt;webctrl aria-label='Next' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-label='Next' tag='A' type='' class='page-link' aaname=' &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;    &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;Next &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;' check:innerText='Next' /&gt;" Guid="1c7a6676-09a6-4dfd-90cf-247d4e2caed9" ScopeSelectorArgument="&lt;html app='firefox.exe' title='Provider Search - SC Child Care Services' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive" />
+              </uix:NExtractData.NextLink>
+              <uix:NExtractData.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.scchildcare.org/provider-search/?all=1" DesignTimeRectangle="103, -1853, 1710, 2460" DesignTimeScaleFactor="1.5" FullSelectorArgument="&lt;webctrl class='row' css-selector='body&amp;gt;section&amp;gt;div&amp;gt;div' tag='DIV' /&gt;" Guid="f7cc1d40-6af8-423c-8d86-8f137ade65c4" InformativeScreenshot="6eb206b99de63ee26dbf8e0dc0c18773.png" ScopeSelectorArgument="&lt;html app='firefox.exe' title='Provider Search - SC Child Care Services' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive" />
+              </uix:NExtractData.Target>
+            </uix:NExtractData>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-11, -11, 1942, 1042" BrowserType="Firefox" IconBase64="AAABAAMAMDAAAAEACACoDgAANgAAACAgAAABAAgAqAgAAN4OAAAQEAAAAQAIAGgFAACGFwAAKAAAADAAAABgAAAAAQAIAAAAAAAACQAAAAAAAAAAAAAAAQAAAAAAANXCYAD49eQA1sNjAPn25wD59+oA18RmAPr36gD6+O0A2MVpAPv58AD8+vMA5dmbAOXangD9+/YA5tqeAP38+QDm26EA59ykAOjdpwDRvE8A6d6qANK9UgDp360A0r5VANO+VQD28twA079YAPbz3wD3898A1MBbAPf04gDVwV4A+PXlANXCYQD59ugA+vfrAOPWkwD6+O4A+/juAOTXlgDk2JkA5tqfAOfbogDQukoA59ylANC7TQD079QA0bxQAPTw1wD18NcA0r1TAPXx2gDTvlYA9vLdANO/WQDUwFwA9/PgAPj04wDh04sA4dSOAOLUjgDi1ZEA49aUAOTXlwDNtj8AzrdCAOXZnQDOuEUA8uzMAM+5SADy7c8A0LpLAPPu0gD079UA0bxRAPXw2ADez4AA9fHbAPbx2wDe0IMA9vLeAODSiQDi1I8A4tWSAMu0OgDMtT0A5NeYAM22QADw6scAzrdDAPHrygDPuEYAz7lJAPPt0ADRu08A9O/WAN7PgQD28dwA39CEAODSigDh040AyrI1AOLUkADLszgAy7Q7AMy0OwDMtT4A7+jCAPDpxQDNtkEA8erIAM63RADx68sAz7hHAM+5SgDby3YA8+3RANzMeQD07tQA3c5/AN7PggDf0IUAyK8tAODRiADJsDAA4dKLAMmxMwDKsTMAyrI2AO7mvQDLszkAzLQ8AO/owwDNtT8A8OnGAPHqyQDaynQA8uvMAPLszwDby3cA/v77ANzMegD///4A3c19AN7OgADHrisA6uGvAMiuKwDIry4A7OO1AMmwMQDs5LgAyrE0AMqyNwDt5bsAy7I3AMuzOgDu5r4AzLQ9AO/oxADw6MQA2MdsAPDpxwDZyG8A2slyAP389gD9/fkA/v35AP7+/ADby3gA3Mx7AP///wDp36oA6uCtAOrhsADIriwAyK8vAOviswDJry8A7OO2AMmwMgDKsTUA1sNhAO3lvADWxGQA+vjrANfFZwDYxmoA+/nuAPv68QDZx20A2chwAPz79ADayHAA/fz3ANvKdgD+/foA/v79AP/+/QDo3qgA6d+rAOvhsQDIri0A6+K0ANXCXwDt5LoA1sNiAPn36QDXxGUA+vjsANfFaADYxmsA+/nvAPv68gDZx24A/PryAPz79QDl2p0A/fz4AP79+wDn3KMA//7+AOjdpgDo3qkA6d+sANK+VADq4K8A079XAOvhsgDUwFoA9/ThANTBXQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACrq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6YPq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6vdDY6rq6urpj2jEV0Exaurq6urq6urq6urq6urq6urq6urq6urq6urq6urq6vYG4F90m6rq6urCRivloUajxBrMyKl3aurq6urq6urq6urq6urq6urq6vECR50yz27R4Cyr9yrq6ur1BW0gJSvypaAW+O6qj/Hy4R0X0szTk5NM0sucLfiKmO/AF5qfrCvyrSAsBKrq6urvRpDrDzQR2l8lK/KlHy0f4BpV1lDQ0NDb21qgph+lpSvr8qUmEEXixDMZc2rq6urpdaeMKvYUIbHe9NvllWctZawlJSUlJSUlJSUsLSAVXFeAMM/lUgGjmxXRTWrq6urq1N83qurq6urxcQosouEmq0MJz07ZGRkUiQoEcudbjEBwNuOq6vdRDSvjaerq6urq5e1Bb2rq6urq6uim0rmq6urq47GxsbG3Y6rq6urq6urq6urwHZWXHpFXaurq6urqyAvgJerq6urq6slAHpg2Kurq6urq6urq6urq6urq6urq6vAYle0ekHJjqurq6urq8VmlOUeq6urq6ursZm1JNirq6urq6urq6urq6urq1AqI6sjNMp85Z2oq6urq6urq6s1XpSIz6urq6urDXh8gGABq6urq6urq6urq6urjGKAcKvCUmmUOsarq6urq6urq6uOFoKWwU2Oq6urqwakfHwdsQmrq6urq6urq6urIC9VSKur2t+AH8Crq6urq6urq6ur2j2YsEoSI6urq6vPd4B6Z7gORtirq6urq6urSEDSwqurq9QfE8+rq6urq6urq6urq8AnVbB/dcCrq6ur1xJefJS0hSmOq6urq46rX1k3B6urqzkVSrmrq6urq6urq6urq6umZLLK59Srq90Nxd1heZl8k3vGq6ur1NmJBx20ezmlHHd8CMKrq6urq6urq6urq6sJCHpxEsSrq1CjhqunY7SYAqKrq6urX23hNSl8tErTLZZ/yKurq6urq6urq6urq6tYVHGgxqurq1p+TI5Eaphj0aurq6urOErKZCOpf6+vr4B4vaurq6urq6urq6urq6uxslGOq6urq19XzsJRynPVq6urq6urjq6bMgO9LKEhoxbAq6urq6urq6urq6urq6vkfAurq6urqzgrzCK2VXCrq6urq6urq8DSgIerjti8Daurq6urq6urq6urq6urq6vNtNLUq6urq+SYozVHMgmrq6urq6urq6soluKrq6urq6urq6urq6urq6urq6urq6sZXH6QTsImsUeUQh5FGNerq6urq6urq6splsirq6urq6urq6urq6urq6urq6urq6vFPpZ8XM4agsoXOAflb0urq6urq6urq8RzmGurq6urq6urq6urq6urq6urq6urq6urvE+br5GvsBWGq6iPlDuoq6urq6urq4dtXDirq6urq6urq6urq6urq6urq6urq6urq8CxwyG6PU2rq6uam1Xgp6urq6urSR2vjcSrq6urq6urq6urq6urq6urq6urq6urq6ur29eljqurq6sKpJSDYooiIxkSL5RZiaurq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urTh+UslcXNnJ+ylUUxaurq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urqzXDaJSvk3p/47Pbq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6vAn2a+uneSIKurq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq47bxMWrq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6sAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA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" InformativeScreenshot="c33c4075b85c8b875a160d7f23e25f86.png" Selector="&lt;html app='firefox.exe' title='Provider Search - SC Child Care Services' /&gt;" Title="Provider Search - SC Child Care Services" Url="https://www.scchildcare.org/provider-search/?all=1&amp;page=1" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+    <ui:WriteCsvFile AddHeaders="True" DataTable="[SC_CCC_URLList]" Delimitator="Comma" DisplayName="Write CSV" FilePath="SouthCarolina_urls.csv" sap:VirtualizedContainerService.HintSize="450,199.33333333333334" sap2010:WorkflowViewState.IdRef="WriteCsvFile_1" ShouldQuote="True" />
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="SouthCarolina_CCCLicenseDetails - Invoke Workflow File (SouthCarolina_CCCLicenseDetails.xaml)" sap:VirtualizedContainerService.HintSize="450,138" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="SouthCarolina_CCCLicenseDetails.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <scg:Dictionary x:TypeArguments="x:String, Argument" />
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+  </Sequence>
+</Activity>

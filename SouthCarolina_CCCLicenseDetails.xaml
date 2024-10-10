@@ -1,0 +1,390 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="SouthCarolina_LicenseDetails" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="844,4180" sap2010:WorkflowViewState.IdRef="SouthCarolina_LicenseDetails_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.CSV</x:String>
+      <x:String>UiPath.CSV.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>System.Numerics</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.Shared.Activities.Utils</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Files.Enums</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Files.Models</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Excel.Enums</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Excel</x:String>
+      <x:String>UiPath.Shared.Activities.ConnectionService.Contracts</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Contracts</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities</x:String>
+      <x:String>Microsoft.Graph</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
+      <x:String>UiPath.CV</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365</AssemblyReference>
+      <AssemblyReference>netstandard</AssemblyReference>
+      <AssemblyReference>Microsoft.Graph.Core</AssemblyReference>
+      <AssemblyReference>Microsoft.Graph</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="SouthCarolina_CCCLicenseDetails" sap:VirtualizedContainerService.HintSize="846,4115.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Name="urls" />
+      <Variable x:TypeArguments="x:Int32" Default="0" Name="rowIndex" />
+      <Variable x:TypeArguments="sd:DataTable" Name="SouthCarolina_LicenseDetails" />
+      <Variable x:TypeArguments="x:String" Default="C:\Users\anusha_chandrakanth\OneDrive - Merilytics\Desktop\Endeavour_WebScraping\Output\SouthCarolina_LicenseDetails.xlsx" Name="out_path" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:ReadCsvFile DataTable="[urls]" Delimitator="Comma" DisplayName="Read CSV" FilePath="SouthCarolina_urls.csv" sap:VirtualizedContainerService.HintSize="784,199.33333333333334" sap2010:WorkflowViewState.IdRef="ReadCsvFile_1" />
+    <ui:BuildDataTable DataTable="[SouthCarolina_LicenseDetails]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="784,100" sap2010:WorkflowViewState.IdRef="BuildDataTable_2" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Provider_x0020_Name&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;500&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;License_x0020_Number&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;License_x0020_Issue_x0020_date&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;License_x0020_Expiration_x0020_Date&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Firefox: New Tab" sap:VirtualizedContainerService.HintSize="784,3728" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="Simulate" ScopeGuid="cc6ffb11-4517-48d2-97b7-7d9f189ecbe6" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="750,3486" sap2010:WorkflowViewState.IdRef="Sequence_13">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[urls]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="688,3398.6666666666665" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
+              <ui:ForEachRow.Body>
+                <ActivityAction x:TypeArguments="sd:DataRow">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="654,3205.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="592,3120.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                      <Sequence.Variables>
+                        <Variable x:TypeArguments="x:String" Name="provider_name" />
+                        <Variable x:TypeArguments="x:String" Name="license_number" />
+                        <Variable x:TypeArguments="x:String" Name="license_issue_date" />
+                        <Variable x:TypeArguments="x:String" Name="license_expiration_date" />
+                        <Variable x:TypeArguments="s:String[]" Name="arrayRow" />
+                      </Sequence.Variables>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="530,124.66666666666667" sap2010:WorkflowViewState.IdRef="NGoToUrl_2" Url="[CurrentRow.Item(&quot;New column 0 Url&quot;).ToString]" Version="V3" />
+                      <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="530,132" sap2010:WorkflowViewState.IdRef="Delay_1" />
+                      <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="530,249.33333333333334" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+                        <ui:MultipleAssign.AssignOperations>
+                          <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+                              <ui:AssignOperation.To>
+                                <OutArgument x:TypeArguments="x:String">[provider_name]</OutArgument>
+                              </ui:AssignOperation.To>
+                              <ui:AssignOperation.Value>
+                                <InArgument x:TypeArguments="x:String">Blank</InArgument>
+                              </ui:AssignOperation.Value>
+                            </ui:AssignOperation>
+                            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+                              <ui:AssignOperation.To>
+                                <OutArgument x:TypeArguments="x:String">[license_number]</OutArgument>
+                              </ui:AssignOperation.To>
+                              <ui:AssignOperation.Value>
+                                <InArgument x:TypeArguments="x:String">Blank</InArgument>
+                              </ui:AssignOperation.Value>
+                            </ui:AssignOperation>
+                            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
+                              <ui:AssignOperation.To>
+                                <OutArgument x:TypeArguments="x:String">[license_issue_date]</OutArgument>
+                              </ui:AssignOperation.To>
+                              <ui:AssignOperation.Value>
+                                <InArgument x:TypeArguments="x:String">Blank</InArgument>
+                              </ui:AssignOperation.Value>
+                            </ui:AssignOperation>
+                            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
+                              <ui:AssignOperation.To>
+                                <OutArgument x:TypeArguments="x:String">[license_expiration_date]</OutArgument>
+                              </ui:AssignOperation.To>
+                              <ui:AssignOperation.Value>
+                                <InArgument x:TypeArguments="x:String">Blank</InArgument>
+                              </ui:AssignOperation.Value>
+                            </ui:AssignOperation>
+                          </scg:List>
+                        </ui:MultipleAssign.AssignOperations>
+                      </ui:MultipleAssign>
+                      <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="530,438.6666666666667" sap2010:WorkflowViewState.IdRef="TryCatch_5">
+                        <TryCatch.Try>
+                          <uix:NGetText ContinueOnError="True" DisplayName="Get Text 'Arthurtown Child'" sap:VirtualizedContainerService.HintSize="334,159.33333333333334" sap2010:WorkflowViewState.IdRef="NGetText_17" ScopeIdentifier="cc6ffb11-4517-48d2-97b7-7d9f189ecbe6" TextString="[provider_name]" Timeout="10" Version="V3">
+                            <uix:NGetText.Target>
+                              <uix:TargetAnchorable BrowserURL="https://www.scchildcare.org/provider/7692/arthurtown-child-development-center/" DesignTimeRectangle="290, 489, 876, 121" DesignTimeScaleFactor="1.5" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='H1' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='H1' type='' class='' /&gt;" Guid="38dbf2c9-28c5-426c-950f-996b36ce1822" InformativeScreenshot="425e834022d7f41914c89e8a3d22a533.png" ScopeSelectorArgument="&lt;html app='firefox.exe' title='Arthurtown Child Development Center - SC Child Care Services' /&gt;" SearchSteps="FuzzySelector" Version="V3" Visibility="Interactive" />
+                            </uix:NGetText.Target>
+                          </uix:NGetText>
+                        </TryCatch.Try>
+                        <TryCatch.Catches>
+                          <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404.6666666666667,23.333333333333332" sap2010:WorkflowViewState.IdRef="Catch`1_5">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ActivityAction x:TypeArguments="s:Exception">
+                              <ActivityAction.Argument>
+                                <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                              </ActivityAction.Argument>
+                              <ui:Continue sap:VirtualizedContainerService.HintSize="334,25.333333333333332" sap2010:WorkflowViewState.IdRef="Continue_9" />
+                            </ActivityAction>
+                          </Catch>
+                        </TryCatch.Catches>
+                      </TryCatch>
+                      <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="530,438.6666666666667" sap2010:WorkflowViewState.IdRef="TryCatch_4">
+                        <TryCatch.Try>
+                          <uix:NGetText ContinueOnError="True" DisplayName="Get Text 'Licensing Type &amp; Number'" sap:VirtualizedContainerService.HintSize="334,159.33333333333334" sap2010:WorkflowViewState.IdRef="NGetText_16" ScopeIdentifier="cc6ffb11-4517-48d2-97b7-7d9f189ecbe6" TextString="[license_number]" Timeout="10" Version="V3">
+                            <uix:NGetText.Target>
+                              <uix:TargetAnchorable BrowserURL="https://www.scchildcare.org/provider/7692/arthurtown-child-development-center/" DesignTimeRectangle="320, 528, 242, 36" DesignTimeScaleFactor="1.5" ElementType="Text" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;p' idx='8' tag='P' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='' tag='P' /&gt;" Guid="106bd5c4-86af-4991-a251-d7552fd8e4e4" InformativeScreenshot="ca3bcff31977075e698b55b46318baef.png" ScopeSelectorArgument="&lt;html app='firefox.exe' title='Arthurtown Child Development Center - SC Child Care Services' /&gt;" SearchSteps="FuzzySelector" Version="V3" Visibility="Interactive">
+                                <uix:TargetAnchorable.Anchors>
+                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                    <uix:Target DesignTimeRectangle="320, 456, 242, 72" ElementType="Text" FullSelectorArgument="&lt;webctrl class='attribute-title' idx='3' tag='P' /&gt;" FuzzySelectorArgument="&lt;webctrl class='attribute-title' type='' tag='P' aaname='Licensing Type &amp;amp; Number:' check:innerText='LICENSING TYPE &amp;amp; NUMBER:' /&gt;" SearchSteps="FuzzySelector" />
+                                  </scg:List>
+                                </uix:TargetAnchorable.Anchors>
+                              </uix:TargetAnchorable>
+                            </uix:NGetText.Target>
+                          </uix:NGetText>
+                        </TryCatch.Try>
+                        <TryCatch.Catches>
+                          <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404.6666666666667,23.333333333333332" sap2010:WorkflowViewState.IdRef="Catch`1_4">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ActivityAction x:TypeArguments="s:Exception">
+                              <ActivityAction.Argument>
+                                <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                              </ActivityAction.Argument>
+                              <ui:Continue sap:VirtualizedContainerService.HintSize="334,25.333333333333332" sap2010:WorkflowViewState.IdRef="Continue_7" />
+                            </ActivityAction>
+                          </Catch>
+                        </TryCatch.Catches>
+                      </TryCatch>
+                      <If Condition="[license_number=&quot;NOT LICENSED&quot;]" sap:VirtualizedContainerService.HintSize="530,964" sap2010:WorkflowViewState.IdRef="If_1">
+                        <If.Then>
+                          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="496,318" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <Assign sap:VirtualizedContainerService.HintSize="434,125.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_12">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:String">[license_issue_date]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:String">NA</InArgument>
+                              </Assign.Value>
+                            </Assign>
+                            <Assign sap:VirtualizedContainerService.HintSize="434,108" sap2010:WorkflowViewState.IdRef="Assign_13">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:String">[license_expiration_date]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:String">NA</InArgument>
+                              </Assign.Value>
+                            </Assign>
+                          </Sequence>
+                        </If.Then>
+                        <If.Else>
+                          <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,466" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <uix:NGetText DisplayName="Get Text 'Issue Date'" sap:VirtualizedContainerService.HintSize="354,199.33333333333334" sap2010:WorkflowViewState.IdRef="NGetText_11" ScopeIdentifier="cc6ffb11-4517-48d2-97b7-7d9f189ecbe6" TextString="[license_issue_date]" Timeout="10" Version="V3">
+                              <uix:NGetText.Target>
+                                <uix:TargetAnchorable BrowserURL="https://www.scchildcare.org/provider/7692/arthurtown-child-development-center/" DesignTimeRectangle="607, 492, 242, 36" DesignTimeScaleFactor="1.5" ElementType="Text" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;p' idx='10' tag='P' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='' tag='P' /&gt;" Guid="7dac2c12-5b4d-47bf-8079-0ee7194e37c3" InformativeScreenshot="b86082c8fb85edf7fe3636d17362e0b1.png" ScopeSelectorArgument="&lt;html app='firefox.exe' title='Arthurtown Child Development Center - SC Child Care Services' /&gt;" SearchSteps="FuzzySelector" Version="V3" Visibility="Interactive">
+                                  <uix:TargetAnchorable.Anchors>
+                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                      <uix:Target DesignTimeRectangle="607, 456, 242, 36" ElementType="Text" FullSelectorArgument="&lt;webctrl class='attribute-title' idx='4' tag='P' /&gt;" FuzzySelectorArgument="&lt;webctrl class='attribute-title' type='' tag='P' aaname='Issue Date:' check:innerText='ISSUE DATE:' /&gt;" SearchSteps="FuzzySelector" />
+                                    </scg:List>
+                                  </uix:TargetAnchorable.Anchors>
+                                </uix:TargetAnchorable>
+                              </uix:NGetText.Target>
+                            </uix:NGetText>
+                            <uix:NGetText DisplayName="Get Text 'Expiration Date'" sap:VirtualizedContainerService.HintSize="354,182" sap2010:WorkflowViewState.IdRef="NGetText_12" ScopeIdentifier="cc6ffb11-4517-48d2-97b7-7d9f189ecbe6" TextString="[license_expiration_date]" Timeout="10" Version="V3">
+                              <uix:NGetText.Target>
+                                <uix:TargetAnchorable BrowserURL="https://www.scchildcare.org/provider/7692/arthurtown-child-development-center/" DesignTimeRectangle="894, 492, 241, 36" DesignTimeScaleFactor="1.5" ElementType="Text" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;p' idx='12' tag='P' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='' tag='P' /&gt;" Guid="20fc6fff-45a8-4e46-b66c-ea65a4f4d36c" InformativeScreenshot="472a2eb025e86492e1c4ebd7c12da3b9.png" ScopeSelectorArgument="&lt;html app='firefox.exe' title='Arthurtown Child Development Center - SC Child Care Services' /&gt;" SearchSteps="FuzzySelector" Version="V3" Visibility="Interactive">
+                                  <uix:TargetAnchorable.Anchors>
+                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                      <uix:Target DesignTimeRectangle="894, 456, 241, 36" ElementType="Text" FullSelectorArgument="&lt;webctrl class='attribute-title' idx='5' tag='P' /&gt;" FuzzySelectorArgument="&lt;webctrl class='attribute-title' type='' tag='P' aaname='Expiration Date:' check:innerText='EXPIRATION DATE:' /&gt;" SearchSteps="FuzzySelector" />
+                                    </scg:List>
+                                  </uix:TargetAnchorable.Anchors>
+                                </uix:TargetAnchorable>
+                              </uix:NGetText.Target>
+                            </uix:NGetText>
+                          </Sequence>
+                        </If.Else>
+                      </If>
+                      <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="530,249.33333333333334" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
+                        <ui:MultipleAssign.AssignOperations>
+                          <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_5">
+                              <ui:AssignOperation.To>
+                                <OutArgument x:TypeArguments="x:String">[provider_name]</OutArgument>
+                              </ui:AssignOperation.To>
+                              <ui:AssignOperation.Value>
+                                <InArgument x:TypeArguments="x:String">[provider_name.ToString]</InArgument>
+                              </ui:AssignOperation.Value>
+                            </ui:AssignOperation>
+                            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_6">
+                              <ui:AssignOperation.To>
+                                <OutArgument x:TypeArguments="x:String">[license_number]</OutArgument>
+                              </ui:AssignOperation.To>
+                              <ui:AssignOperation.Value>
+                                <InArgument x:TypeArguments="x:String">[license_number.ToString]</InArgument>
+                              </ui:AssignOperation.Value>
+                            </ui:AssignOperation>
+                            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_7">
+                              <ui:AssignOperation.To>
+                                <OutArgument x:TypeArguments="x:String">[license_issue_date]</OutArgument>
+                              </ui:AssignOperation.To>
+                              <ui:AssignOperation.Value>
+                                <InArgument x:TypeArguments="x:String">[license_issue_date.ToString]</InArgument>
+                              </ui:AssignOperation.Value>
+                            </ui:AssignOperation>
+                            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_8">
+                              <ui:AssignOperation.To>
+                                <OutArgument x:TypeArguments="x:String">[license_expiration_date]</OutArgument>
+                              </ui:AssignOperation.To>
+                              <ui:AssignOperation.Value>
+                                <InArgument x:TypeArguments="x:String">[license_expiration_date.ToString]</InArgument>
+                              </ui:AssignOperation.Value>
+                            </ui:AssignOperation>
+                          </scg:List>
+                        </ui:MultipleAssign.AssignOperations>
+                      </ui:MultipleAssign>
+                      <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{provider_name, license_number, license_issue_date,license_expiration_date}]" DataTable="[SouthCarolina_LicenseDetails]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="530,231.33333333333334" sap2010:WorkflowViewState.IdRef="AddDataRow_4" />
+                      <ui:WriteCsvFile AddHeaders="True" DataTable="[SouthCarolina_LicenseDetails]" Delimitator="Comma" DisplayName="Write CSV" FilePath="SouthCarolina_LicenseDetails.csv" sap:VirtualizedContainerService.HintSize="530,182" sap2010:WorkflowViewState.IdRef="WriteCsvFile_2" ShouldQuote="True" />
+                    </Sequence>
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEachRow.Body>
+            </ui:ForEachRow>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-11, -11, 1942, 1042" BrowserType="Firefox" IconBase64="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" InformativeScreenshot="91d231ba5d484e9b2856c14fa44bed2a.png" Selector="&lt;html app='firefox.exe' title='New Tab' /&gt;" Title="New Tab" Url="about:home" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
